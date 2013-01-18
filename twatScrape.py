@@ -16,7 +16,7 @@ def main(queries = ['cats','dogs'], results_per_page = '100', language = 'en', n
         for page in range(1, num_pages + 1):
             base_url = 'http://search.twitter.com/search.json?q=%s&rpp=%s&lang=%s&page=%s' \
                  % (urllib.parse.quote_plus(query), results_per_page, language, page)
-            wl = getwordlist(base_url)
+            wl.extend(getwordlist(base_url))
     uniqWL = uniq(wl)
     for word in uniqWL:
         print( word )            
