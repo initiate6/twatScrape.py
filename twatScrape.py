@@ -46,8 +46,9 @@ def uniq(listobj):
     temp = ""
     for item in listobj:
       if item != temp:
-		    final.append(item)
-	    temp = item	
+          if len(item) > 3:
+              final.append(item)
+	      temp = item	
     return final
 
 main()
