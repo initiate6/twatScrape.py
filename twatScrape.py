@@ -19,7 +19,7 @@ def main(queries = ['cats','dogs'], results_per_page = '100', language = 'en', n
             wl.extend(getwordlist(base_url))
     uniqWL = uniq(wl)
     for word in uniqWL:
-        print( word )            
+        print( re.sub("^\#|^\@", '', word ) )            
 
 #Takes base_url. Request .json data parse data and returns word list.  
 def getwordlist(base_url):
