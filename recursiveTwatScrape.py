@@ -28,7 +28,7 @@ def main():
     wordlist.extend(secondWL)
     wordlist = uniq(wordlist)
     for word in wordlist:        
-        print( word )
+        print( re.sub("^\#|^\@", '', word ) )
 
 def query(queries, results_per_page , language , num_pages):
     wl = []
