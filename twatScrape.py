@@ -3,7 +3,7 @@
 #By: INIT_6
 #scrapes twitter for key words and prints the text. 
 #TODO: send keyword queries through comand line
-#TODO: cut out words less then 3char
+
 
 import json
 import urllib.request
@@ -45,10 +45,10 @@ def uniq(listobj):
     listobj.sort()
     temp = ""
     for item in listobj:
-      if item != temp:
-          if len(item) > 3:
-              final.append(item)
-	      temp = item	
+        if item != temp:
+            if len(item) > 3:
+                final.append(item)
+                temp = item	
     return final
 
 main()
